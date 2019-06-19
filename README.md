@@ -11,7 +11,7 @@ The main purpose of this repo is to try out the new architectural concepts and l
 
 ### Things to bear in mind when contributing to this repo ###
 
-- How the the code in this project will be implemented at the android storefront codebase.
+- How the code in this project will be implemented at the android storefront codebase.
 - The instances of the classes in this project should be ready to be provided with DI(Dependency Injection) in the future.
 - The ViewModels should be easily tested.
 - The Fragments and ViewModels should be independent from the activity as much as possible.
