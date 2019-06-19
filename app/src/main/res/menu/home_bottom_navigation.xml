@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_tracking"
+          android:title="tracking"
+          android:icon="@drawable/ic_cart"/>
+    <item android:id="@+id/action_my_slice"
+          android:title="my slice"
+          android:icon="@drawable/ic_close"/>
+    <item android:id="@+id/action_browse_pizzerias"
+          android:title="browse pizzerias"
+          android:icon="@drawable/ic_done"/>
+</menu>
