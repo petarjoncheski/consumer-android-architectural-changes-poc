@@ -1,19 +1,14 @@
 package com.example.myapplication.main.home
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.myapplication.R
-import com.example.myapplication.general.GeneralFragmentPagerAdapter
-import com.example.myapplication.main.home.adapter.TabsPagerAdapter
-import com.example.myapplication.main.home.browse.BrowsePizzeriasFragment
-import com.example.myapplication.main.home.myslice.MySliceFragment
-import com.example.myapplication.main.home.tracking.TrackingFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class HomeActivity : AppCompatActivity() {
     enum class HomeScreenTab(val position: Int) {
         TRACKING(0),
         MY_SLICE(1),
@@ -24,55 +19,31 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
     }
 
-    private val tabsPagerAdapter: TabsPagerAdapter? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        initViewPager()
+        init()
         createEvents()
     }
 
-    private fun initViewPager() {
-        val tabsAdapter =
-            TabsPagerAdapter(
-                supportFragmentManager,
-                object : GeneralFragmentPagerAdapter.GeneralPagerAdapterListener {
-                    override val pagerFragmentsCount: Int
-                        get() = HomeScreenTab.values().size
-
-                    override fun createPagerFragmentInstance(position: Int): Fragment? =
-                        when (HomeScreenTab.valueOf(position)) {
-                            HomeScreenTab.TRACKING -> TrackingFragment()
-                            HomeScreenTab.MY_SLICE -> MySliceFragment()
-                            HomeScreenTab.BROWSE_PIZZERIAS -> BrowsePizzeriasFragment()
-                            null -> null
-                        }
-                })
-
-        home_view_pager.offscreenPageLimit = HomeScreenTab.values().size
-        home_view_pager.adapter = tabsAdapter
-
+    private fun init() {
+        home_bottom_navigation_view.setupWithNavController(nav_host_fragment.findNavController())
     }
+
 
     private fun createEvents() {
-        home_bottom_navigation_view.setOnNavigationItemSelectedListener(this)
+        nav_host_fragment.findNavController().addOnDestinationChangedListener { controller, destination, arguments ->
+            when (destination.id) {
+                R.id.action_tracking -> {
+                    Toast.makeText(this@HomeActivity, "Navigated to tracking", Toast.LENGTH_SHORT).show()
+                }
+                R.id.action_my_slice -> {
+                    Toast.makeText(this@HomeActivity, "Navigated to my slice", Toast.LENGTH_SHORT).show()
+                }
+                R.id.action_browse_pizzerias -> {
+                    Toast.makeText(this@HomeActivity, "Navigated to browse pizzerias", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
-
-    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean = when (menuItem.itemId) {
-        R.id.action_tracking -> {
-            home_view_pager.setCurrentItem(HomeScreenTab.TRACKING.position, false)
-            true
-        }
-        R.id.action_my_slice -> {
-            home_view_pager.setCurrentItem(HomeScreenTab.MY_SLICE.position, false)
-            true
-        }
-        R.id.action_browse_pizzerias -> {
-            home_view_pager.setCurrentItem(HomeScreenTab.BROWSE_PIZZERIAS.position, false)
-            true
-        }
-        else -> false
-    }
-
 }

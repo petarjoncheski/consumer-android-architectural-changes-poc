@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/home_screen_navigation"
+            app:startDestination="@+id/action_my_slice">
+    <fragment android:id="@+id/action_my_slice"
+              android:name="com.example.myapplication.main.home.myslice.MySliceFragment"
+              tools:layout="@layout/fragment_my_slice"
+              android:label="@string/my_slice"
+    />
+    <fragment android:id="@+id/action_browse_pizzerias"
+              android:name="com.example.myapplication.main.home.browse.BrowsePizzeriasFragment"
+              tools:layout="@layout/fragment_browse_pizzerias"
+              android:label="@string/browse_pizzerias"/>
+    <fragment android:id="@+id/action_tracking"
+              android:name="com.example.myapplication.main.home.tracking.TrackingFragment"
+              tools:layout="@layout/fragment_tracking"
+              android:label="@string/tracking"/>
+</navigation>
