@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-
+        <variable name="viewModel" type="com.example.myapplication.main.home.tracking.TrackingViewModel"/>
     </data>
-    <LinearLayout android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent">
-        <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
-                                                     android:layout_height="match_parent"
-                                                     android:gravity="center"
-                                                     android:text="Tracking Tab"/>
-    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tracking_tab"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+                android:layout_below="@+id/title"
+                android:id="@+id/review_order_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.consumeReviewOrderTapped()}"
+                android:text="@string/review_order"
+                android:layout_marginTop="20dp"
+                android:background="@color/brick"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+        />
+        <androidx.appcompat.widget.AppCompatEditText
+                android:layout_marginTop="15dp"
+                android:id="@+id/editText" android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/review_order_button"
+                android:layout_centerHorizontal="true"
+                android:text="@={viewModel.message}"/>
+        <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.consumeShowMessageTapped()}"
+                android:text="@string/show_prompt"
+                android:background="@color/brick"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/editText"
+                android:padding="5dp"/>
+    </RelativeLayout>
 </layout>

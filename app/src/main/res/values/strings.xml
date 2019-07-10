@@ -3,4 +3,9 @@
     <string name="my_slice">my slice</string>
     <string name="tracking">tracking</string>
     <string name="browse_pizzerias">browse pizzerias</string>
+
+    <string name="tracking_tab">Tracking Tab</string>
+    <string name="review_order">Review order</string>
+    <string name="show_prompt">Show prompt</string>
+
 </resources>
