@@ -16,6 +16,11 @@ class TrackingViewModel(
             TrackingViewModelFactory(userManager)
     }
 
+    init {
+        userManager.id.subscribe()
+            .also { disposableContainer.add(it) }
+    }
+
     /**
      * Define all the actions that the view should consume.
      */

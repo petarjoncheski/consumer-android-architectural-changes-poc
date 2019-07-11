@@ -1,3 +1,9 @@
 package com.example.myapplication.mangers
 
-class UserManager
+import io.reactivex.Observable
+
+
+class UserManager {
+    val id: Observable<String>
+        get() = Observable.just("1")
+}
