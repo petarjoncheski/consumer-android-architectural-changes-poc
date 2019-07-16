@@ -11,6 +11,7 @@ import com.example.myapplication.R
 import com.example.myapplication.mangers.UserManager
 import com.example.myapplication.databinding.FragmentMySliceBinding
 import com.example.myapplication.general.GeneralFragment
+import com.example.myapplication.general.GeneralViewModelFactory
 
 class MySliceFragment : GeneralFragment<MySliceViewModel>() {
     private val userManager: UserManager = UserManager()
@@ -18,7 +19,7 @@ class MySliceFragment : GeneralFragment<MySliceViewModel>() {
     override fun bindLayout(inflater: LayoutInflater, container: ViewGroup?): View {
         val mySliceViewDataBinding: FragmentMySliceBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_my_slice, container, false)
-        viewModel = ViewModelProviders.of(this, MySliceViewModel.createFactory(userManager))
+        viewModel = ViewModelProviders.of(this, GeneralViewModelFactory { MySliceViewModel(userManager) })
             .get(MySliceViewModel::class.java)
         return mySliceViewDataBinding.root
     }

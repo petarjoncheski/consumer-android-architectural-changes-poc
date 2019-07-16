@@ -15,6 +15,7 @@ import com.example.myapplication.ReviewOrderActivity
 import com.example.myapplication.mangers.UserManager
 import com.example.myapplication.databinding.FragmentTrackingBinding
 import com.example.myapplication.general.GeneralFragment
+import com.example.myapplication.general.GeneralViewModelFactory
 
 class TrackingFragment : GeneralFragment<TrackingViewModel>() {
     private val userManager: UserManager = UserManager()
@@ -23,7 +24,7 @@ class TrackingFragment : GeneralFragment<TrackingViewModel>() {
         DataBindingUtil.inflate<FragmentTrackingBinding>(inflater, R.layout.fragment_tracking, container, false)
             .let {
                 this.viewModel =
-                    ViewModelProviders.of(this@TrackingFragment, TrackingViewModel.createFactory(userManager))
+                    ViewModelProviders.of(this@TrackingFragment, GeneralViewModelFactory { TrackingViewModel(userManager) })
                         .get(TrackingViewModel::class.java)
 
                 it.viewModel = this.viewModel
