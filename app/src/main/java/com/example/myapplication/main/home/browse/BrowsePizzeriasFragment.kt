@@ -9,6 +9,7 @@ import com.example.myapplication.R
 import com.example.myapplication.mangers.UserManager
 import com.example.myapplication.databinding.FragmentBrowsePizzeriasBinding
 import com.example.myapplication.general.GeneralFragment
+import com.example.myapplication.general.GeneralViewModelFactory
 
 class BrowsePizzeriasFragment : GeneralFragment<BrowsePizzeriasViewModel>() {
     private val userManager: UserManager = UserManager()
@@ -16,7 +17,7 @@ class BrowsePizzeriasFragment : GeneralFragment<BrowsePizzeriasViewModel>() {
     override fun bindLayout(inflater: LayoutInflater, container: ViewGroup?): View {
         val browseViewDataBinding: FragmentBrowsePizzeriasBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_browse_pizzerias, container, false)
-        viewModel = ViewModelProviders.of(this, BrowsePizzeriasViewModel.createFactory(userManager))
+        viewModel = ViewModelProviders.of(this, GeneralViewModelFactory { BrowsePizzeriasViewModel(userManager) })
             .get(BrowsePizzeriasViewModel::class.java)
         return browseViewDataBinding.root
     }
