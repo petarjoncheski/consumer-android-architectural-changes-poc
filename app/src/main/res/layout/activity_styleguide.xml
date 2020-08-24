@@ -24,7 +24,7 @@
                 style="@style/Slice.Widget.Button.Primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apply second theme" />
+                android:text="Apply Dark theme" />
         </LinearLayout>
 
         <LinearLayout

@@ -25,11 +25,11 @@ class StyleGuideActivity : AppCompatActivity() {
             applyTheme(R.style.AppTheme)
         }
         binding.applyTheme2.setOnClickListener {
-            applyTheme(R.style.AppTheme_Second)
+            applyTheme(R.style.AppTheme_Dark)
         }
     }
 
-    private fun applyTheme(@StyleRes nextTheme:Int) {
+    private fun applyTheme(@StyleRes nextTheme: Int) {
         StyleGuideActivity.theme = nextTheme
         finish()
         startActivity(Intent(this, StyleGuideActivity::class.java))
