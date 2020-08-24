@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="buttonPrimaryTextColor" format="reference" />
+    <attr name="buttonSecondaryTextColor" format="reference" />
+    <attr name="buttonTertiaryTextColor" format="reference" />
+
+
+    <attr name="buttonPrimaryBackground" format="reference" />
+    <attr name="buttonSecondaryBackground" format="reference" />
+    <attr name="buttonTertiaryBackground" format="reference" />
+
+    <attr name="surfaceColor" format="reference" />
+    <attr name="backgroundColor" format="reference" />
+</resources>
