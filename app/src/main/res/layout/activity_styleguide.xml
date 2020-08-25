@@ -81,22 +81,22 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Slice.TextStyle.Headline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Headling text"
-                android:textAppearance="@style/Slice.TextAppearance.Headline" />
+                android:text="Headling text" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Slice.TextStyle.H1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="H1 text"
-                android:textAppearance="@style/Slice.TextAppearance.H1" />
+                android:text="H1 text" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Slice.TextStyle.Body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Body text"
-                android:textAppearance="@style/Slice.TextAppearance.Body" />
+                android:text="Body text" />
         </LinearLayout>
     </LinearLayout>
 </layout>
