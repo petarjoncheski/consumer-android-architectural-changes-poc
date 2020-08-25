@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Slice.TextStyle.Headline" parent="Slice.TextAppearance">
+    <style name="Slice.TextStyle" parent="android:Widget.TextView" />
+
+    <style name="Slice.TextStyle.Headline" parent="Slice.TextStyle">
         <item name="android:lineSpacingMultiplier">1.15</item>
         <item name="android:textAppearance">@style/Slice.TextAppearance.Headline</item>
     </style>
 
-    <style name="Slice.TextStyle.H1" parent="Slice.TextAppearance">
+    <style name="Slice.TextStyle.H1" parent="Slice.TextStyle">
         <item name="android:textAppearance">@style/Slice.TextAppearance.H1</item>
         <item name="android:padding">10dp</item>
     </style>
 
-    <style name="Slice.TextStyle.Body" parent="Slice.TextAppearance">
+    <style name="Slice.TextStyle.Body" parent="Slice.TextStyle">
         <item name="android:textAppearance">@style/Slice.TextAppearance.Body</item>
     </style>
 
