@@ -8,4 +8,7 @@
     <string name="review_order">Review order</string>
     <string name="show_prompt">Show prompt</string>
 
+    <string name="style_guide_screen">Style Guide screen</string>
+    <string name="home_screen">Home Screen</string>
+
 </resources>

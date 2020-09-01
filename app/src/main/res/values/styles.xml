@@ -6,6 +6,44 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/cp_black</item>
+        <item name="android:textColorSecondary">@color/cp_dark_gray</item>
+
+        <item name="surfaceColor">@color/cp_white</item>
+        <item name="backgroundColor">@color/cp_light_gray</item>
+
+        <item name="buttonPrimaryTextColor">@color/cp_white</item>
+        <item name="buttonSecondaryTextColor">@color/cp_red</item>
+        <item name="buttonTertiaryTextColor">@color/cp_black</item>
+
+        <item name="buttonPrimaryBackground">@color/cp_red</item>
+        <item name="buttonSecondaryBackground">@color/cp_white</item>
+        <item name="buttonTertiaryBackground">@color/cp_dark_gray</item>
+
     </style>
 
+    <style name="AppTheme.Dark" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/cp_gray</item>
+        <item name="colorPrimaryDark">@color/cp_dark_gray</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Ripple effect-->
+        <item name="android:colorControlHighlight">@color/cp_white</item>
+
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/cp_dark_gray</item>
+
+        <item name="surfaceColor">@color/cp_medium_gray</item>
+        <item name="backgroundColor">@color/cp_gray</item>
+
+        <item name="buttonPrimaryTextColor">@color/cp_gray</item>
+        <item name="buttonSecondaryTextColor">@color/cp_black</item>
+        <item name="buttonTertiaryTextColor">@color/cp_medium_gray</item>
+
+        <item name="buttonPrimaryBackground">@color/cp_black</item>
+        <item name="buttonSecondaryBackground">@color/cp_gray</item>
+        <item name="buttonTertiaryBackground">@color/cp_dark_gray</item>
+    </style>
 </resources>

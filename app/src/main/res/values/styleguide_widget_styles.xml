@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Slice.Widget.Button" parent="Widget.AppCompat.Button">
+        <item name="android:padding">@dimen/button_padding</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="Slice.Widget.Button.Primary" parent="Slice.Widget.Button">
+        <item name="android:textAppearance">@style/Slice.TextAppearance.Button.Primary</item>
+        <item name="android:background">@drawable/btn_primary_background</item>
+    </style>
+
+    <style name="Slice.Widget.Button.Secondary" parent="Slice.Widget.Button">
+        <item name="android:textAppearance">@style/Slice.TextAppearance.Button.Secondary</item>
+        <item name="android:background">@drawable/btn_secondary</item>
+    </style>
+</resources>

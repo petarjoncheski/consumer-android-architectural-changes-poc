@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">@color/brick</color>
     <color name="brick">#c54531</color>
+    <color name="brick_25">#3fc54531</color>
     <color name="black">#000000</color>
 
 </resources>

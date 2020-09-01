@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Typography for texts  -->
+
+    <style name="Slice.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="Slice.TextAppearance.Headline" parent="Slice.TextAppearance">
+        <item name="lineHeight">28sp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Slice.TextAppearance.H1" parent="Slice.TextAppearance">
+        <item name="lineHeight">22sp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="Slice.TextAppearance.Body" parent="Slice.TextAppearance">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!--Typography for buttons-->
+
+    <style name="Slice.TextAppearance.Button.Primary" parent="TextAppearance.AppCompat.Widget.Button.Borderless.Colored">
+        <item name="lineHeight">26sp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/buttonPrimaryTextColor</item>
+    </style>
+
+    <style name="Slice.TextAppearance.Button.Secondary" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:textColor">?attr/buttonSecondaryTextColor</item>
+    </style>
+
+</resources>
