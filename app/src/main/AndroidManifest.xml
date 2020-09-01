@@ -10,16 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.home.HomeActivity" />
-        <activity android:name=".ReviewOrderActivity" />
-
-        <activity android:name=".main.style.StyleGuideActivity">
+        <activity android:name=".main.LandingPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".main.home.HomeActivity" />
+        <activity android:name=".ReviewOrderActivity" />
+        <activity android:name=".main.style.StyleGuideActivity" />
     </application>
 
 </manifest>
